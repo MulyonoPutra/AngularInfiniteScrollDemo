@@ -21,11 +21,11 @@ export class CommentService {
     ) as Observable<Comment[]>;
   }
 
-  // Important: Using JSONPlaceholder API will not be really updated on the server but it will be faked as if.
+  // Important: Using JSONPlaceholder API will not be really deleted on the server but it will be faked as if.
   // But status always 200
   remove(id: number): Observable<any> {
     return this.http
-      .delete(`https://jsonplaceholder.typicode.com/posts/${id}`)
+      .delete(`${environment.endpoint}/posts/${id}`)
       .pipe(catchError(this.handleError));
   }
 }
