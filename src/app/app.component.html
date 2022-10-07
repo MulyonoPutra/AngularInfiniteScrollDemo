@@ -1,6 +1,7 @@
 <app-navbar></app-navbar>
 
-<div class="mt-20" infinite-scroll [infiniteScrollDistance]="distance" [infiniteScrollThrottle]="throttle" (scrolled)="onScroll()">
+<div class="mt-20" infinite-scroll [infiniteScrollDistance]="distance" [infiniteScrollThrottle]="throttle"
+  (scrolled)="onScroll()">
   <div *ngFor="let comment of commentaries" class="grid place-items-center mb-2">
     <app-comments-card [comment]="comment" (commentId)=onRemove(comment.id)></app-comments-card>
   </div>
